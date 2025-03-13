@@ -67,7 +67,7 @@ while True:
 
         else:
             print("Valor de descuento no válido. Debe estar entre 0 y 100%.")
-    else:
+    elif pregunta_de_descuento.lower() == "no":
         #Si no hay descuento, imprime en pantalla
         print("=" * 60)
         print(" " * 60)
@@ -79,4 +79,9 @@ while True:
         print("=" * 60)
         print("Apreciamos tu visita, ¡esperamos verte pronto!".center(60))
         print("*" * 60)
-        break  
+        break
+    else:
+        #En caso que el usuario no indique entre las opciones disponible, se muestra error
+        #Y vuelve a pedirle los datos
+        print("Error: debe escoger entre las opciones si / no")
+        continue 
