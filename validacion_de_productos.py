@@ -34,6 +34,7 @@ if precio_unitario.isdigit() and cantidad_de_productos.isdigit():
 
         # Validación de si aplica descuento
         if pregunta_de_descuento.lower() == "si":
+            #.lower() hace minusculas los caracteres que contiene la variable
             valor_de_descuento = input("¿Cuánto es el porcentaje de descuento del producto?: ")
             valor_de_descuento = valor_de_descuento.replace('%', '')
             valor_de_descuento_float = float(valor_de_descuento)
@@ -56,6 +57,8 @@ if precio_unitario.isdigit() and cantidad_de_productos.isdigit():
         elif pregunta_de_descuento.lower() == "no":
             print("=" * 60)
             print(f"Producto: {nombre_del_producto}".ljust(30) + f"Costo total: ${costo_sin_descuento:.2f}".rjust(30))
+            #.ljust() alinea el texto a la izquierda
+            #.rjust() alinea el texto a la derecha
             print(" " * 60)
             print("¡Gracias por confiar en RIWI!".center(60))
             print("=" * 60)
